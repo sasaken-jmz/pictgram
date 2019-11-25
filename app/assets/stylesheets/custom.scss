@@ -71,3 +71,18 @@ h1, h2 {
   width: 100%;
   z-index: 10000;
 }
+
+.navbar-transparent {
+  marhin-bottom: 0px;
+  background-colot: rgba(0,0,0,0.5);
+  a {
+    color: #fff !important;
+  }
+  .navbar-brand {
+    padding: 0px;
+    margin-top: 15px;
+  }
+  img {
+    height: 40px;
+  }
+}
