@@ -12,5 +12,11 @@ class User < ApplicationRecord
     format: {with: VALID_PASSWORD_REGEX}
     
   has_many :topics
+  has_many :favorites, dependent: :destroy
+  has_many :favorite_topics, through: :favorites, source: 'topic'
+  
+  def already_liked?(topic)
+    self.favorites.exists?(topic_id: topic.id)
+  end
     
 end

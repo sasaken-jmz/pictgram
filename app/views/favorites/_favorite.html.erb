@@ -1,0 +1,8 @@
+<div class="favorite_button_on">
+  <%= link_to favorites_path(topic_id: @topics.ids), method: :post, remote: true %>
+  <%= @favorite_count %>
+</div>
+<div class="favorite_button">
+  <%= link_to favorites_path(topic_id: @topics.ids), method: :delete, remote: true %>
+  <%= @favorite_count %>
+</div>
